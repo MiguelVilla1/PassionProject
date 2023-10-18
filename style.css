@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #cd1515;
+    color: #91910f;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.cover {
+    text-align: center;
+    background-color: #ebefd3;
+    padding: 30px;
+    border-radius: 60px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+button {
+    background-color: #dfe171;
+    color: #7c7e03;
+    padding: 10px 20px;
+    font-size: 75px;
+    border: 30px
+    border-radius: 5px;
+    cursor: pointer;
+}
