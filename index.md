@@ -11,7 +11,9 @@ title: Student Blog
 <body>
     <div class="cover">
         <h1 style="color: gold;">FIFA Pack Openings</h1>
-        <button>Start Game</button>
+        <button>
+    <a href="2023-10-17-Open_A_Pack.md#open-a-pack">Start</a>
+</button>
     </div>
 </body>
 </html>
