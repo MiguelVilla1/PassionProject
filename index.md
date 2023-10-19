@@ -10,9 +10,9 @@ title: Student Blog
 </head>
 <body>
     <div class="cover">
-        <h1 style="color: gold;">FIFA Pack Openings</h1>
+        <h1 style="color: silver;">FIFA Pack Openings</h1>
         <button>
-    <a href="2023-10-17-Open_A_Pack.md#open-a-pack">Start</a>
+    <a href="2023/10/17/Open_A_Pack.html">Start</a>
 </button>
     </div>
 </body>

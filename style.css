@@ -5,14 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #cd1515;
+    background-color: #dfdfd7;
     color: #91910f;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .cover {
     text-align: center;
-    background-color: #ebefd3;
+    background-color: #eab918;
     padding: 30px;
     border-radius: 60px;
 }

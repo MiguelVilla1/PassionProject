@@ -1,7 +1,9 @@
-
+<html>
+<head>
+<title>Pack Opening</title>
 </head>
 <body>
-    <button id="random-link-button">Go to a Random Link</button>
+    <button id="random-link-button">Open a pack</button>
     <script>
         // Array of three random URLs
         var randomLinks = [
