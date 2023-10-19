@@ -2,6 +2,14 @@
 <head>
 <title>Pack Opening</title>
 </head>
+<style>
+        body {
+            background-image: url('https://i.ytimg.com/vi/vpjWI1e0Mbk/maxresdefault.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+    </style>
 <body>
     <button id="random-link-button">Open a pack</button>
     <script>
