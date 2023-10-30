@@ -17,6 +17,12 @@
         <p>Name: <span id="player-name"></span></p>
         <p>Position: <span id="player-position"></span></p>
         <p>Overall: <span id="player-overall"></span></p>
+        <p>Pace: <span id="player-pace"></span></p>
+        <p>Shooting: <span id="player-shooting"></span></p>
+        <p>Passing: <span id="player-passing"></span></p>
+        <p>Dribbling: <span id="player-dribbling"></span></p>
+        <p>Defending: <span id="player-defending"></span></p>
+        <p>Physicality: <span id="player-physicality"></span></p>
         <!-- Add more player attributes here -->
     </div>
     <script>
@@ -29,6 +35,12 @@
                     document.getElementById('player-name').textContent = data.name;
                     document.getElementById('player-position').textContent = data.position;
                     document.getElementById('player-overall').textContent = data.overall;
+                    document.getElementById('player-pace').textContent = data.pace;
+                    document.getElementById('player-shooting').textContent = data.shooting;
+                    document.getElementById('player-passing').textContent = data.passing;
+                    document.getElementById('player-dribbling').textContent = data.dribbling;
+                    document.getElementById('player-defending').textContent = data.defending;
+                    document.getElementById('player-physicality').textContent = data.physicality;
                     // Add more lines to display other player attributes
                 });
         }
