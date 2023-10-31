@@ -21,17 +21,20 @@
         <p>Shooting: <span id="player-shooting"></span></p>
         <p>Passing: <span id="player-passing"></span></p>
         <p>Dribbling: <span id="player-dribbling"></span></p>
+<<<<<<< HEAD
         <p>Defending: <span id="player-defending"></span></p>
         <p>Physicality: <span id="player-physicality"></span></p>
         <!-- Add more player attributes here -->
+=======
+        <p>Defense: <span id="player-defense"></span></p>
+        <p>Physicality: <span id="player-physicality"></span></p>
+>>>>>>> 852ea7f (api endpoint update)
     </div>
     <script>
-        // Function to request data from the backend
         function openPack() {
-            fetch('/api/open_pack')  // Replace '/api/open_pack' with the actual endpoint on your Flask server
+            fetch('http://localhost:8282/api/open_pack') 
                 .then(response => response.json())
                 .then(data => {
-                    // Process and display the data in your HTML
                     document.getElementById('player-name').textContent = data.name;
                     document.getElementById('player-position').textContent = data.position;
                     document.getElementById('player-overall').textContent = data.overall;
@@ -39,12 +42,16 @@
                     document.getElementById('player-shooting').textContent = data.shooting;
                     document.getElementById('player-passing').textContent = data.passing;
                     document.getElementById('player-dribbling').textContent = data.dribbling;
+<<<<<<< HEAD
                     document.getElementById('player-defending').textContent = data.defending;
                     document.getElementById('player-physicality').textContent = data.physicality;
                     // Add more lines to display other player attributes
+=======
+                    document.getElementById('player-defense').textContent = data.defense;
+                    document.getElementById('player-physicality').textContent = data.physicality;
+>>>>>>> 852ea7f (api endpoint update)
                 });
         }
-        // Add a click event listener to the "Open a pack" button
         document.getElementById("open-pack-button").addEventListener("click", openPack);
     </script>
 </body>
