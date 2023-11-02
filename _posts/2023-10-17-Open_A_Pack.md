@@ -9,7 +9,12 @@
         background-repeat: no-repeat;
         text-align: center;
     }
-</style>
+
+    /* Add the following CSS rules */
+    #player-name, #player-position, #player-overall, #player-pace, #player-shooting, #player-passing, #player-dribbling, #player-defending, #player-physicality {
+        color: white;
+    }
+</style>    
 <body>
     <button id="open-pack-button">Open a pack</button>
     <div>
