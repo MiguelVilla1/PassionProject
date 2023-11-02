@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Pack Opening</title>
@@ -27,19 +26,24 @@
     </div>
     <script>
         function openPack() {
-            fetch('http://fifabackend.stu.nighthawkcodingsociety.com/') 
-                .then(response => response.json())
+            fetch('http://localhost:8281/api/jokes/')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(data => {
-                    document.getElementById('player-name').textContent = data.name;
-                    document.getElementById('player-position').textContent = data.pos;
-                    document.getElementById('player-overall').textContent = data.ovr;
-                    document.getElementById('player-pace').textContent = data.pac;
-                    document.getElementById('player-shooting').textContent = data.sho;
-                    document.getElementById('player-passing').textContent = data.pas;
-                    document.getElementById('player-dribbling').textContent = data.dri;
-                    document.getElementById('player-defending').textContent = data.def;
-                    document.getElementById('player-physicality').textContent = data.phy;
-                });
+                    console.log(data);
+                    data.forEach(player => {
+                        console.log('Name: ${player.position}');
+                        console.log('Position: ${player.position}');
+                        console.log('Stats: ${player.stats.join(', ')}');
+                        });
+                    });
+                    .catch(error => {
+                        console.error('There was a problem with the fetch operation:',error)
+                    })
         }
         document.getElementById("open-pack-button").addEventListener("click", openPack);
     </script>
