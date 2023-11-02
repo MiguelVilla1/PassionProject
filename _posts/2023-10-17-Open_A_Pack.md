@@ -26,7 +26,7 @@
     </div>
     <script>
         function openPack() {
-            fetch('http://localhost:8282/get_random_player') 
+            fetch('http://localhost:8281/get_random_player') 
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('player-name').textContent = data.name;
