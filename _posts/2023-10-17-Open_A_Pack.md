@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Pack Opening</title>
@@ -9,12 +10,7 @@
         background-repeat: no-repeat;
         text-align: center;
     }
-
-    /* Add the following CSS rules */
-    #player-name, #player-position, #player-overall, #player-pace, #player-shooting, #player-passing, #player-dribbling, #player-defending, #player-physicality {
-        color: white;
-    }
-</style>    
+</style>
 <body>
     <button id="open-pack-button">Open a pack</button>
     <div>
@@ -31,7 +27,7 @@
     </div>
     <script>
         function openPack() {
-            fetch('http://localhost:8282/get_random_player') 
+            fetch('http://fifabackend.stu.nighthawkcodingsociety.com/') 
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('player-name').textContent = data.name;
