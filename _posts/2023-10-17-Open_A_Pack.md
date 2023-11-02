@@ -21,35 +21,23 @@
         <p>Shooting: <span id="player-shooting"></span></p>
         <p>Passing: <span id="player-passing"></span></p>
         <p>Dribbling: <span id="player-dribbling"></span></p>
-<<<<<<< HEAD
         <p>Defending: <span id="player-defending"></span></p>
         <p>Physicality: <span id="player-physicality"></span></p>
-        <!-- Add more player attributes here -->
-=======
-        <p>Defense: <span id="player-defense"></span></p>
-        <p>Physicality: <span id="player-physicality"></span></p>
->>>>>>> 852ea7f (api endpoint update)
     </div>
     <script>
         function openPack() {
-            fetch('http://localhost:8282/api/open_pack') 
+            fetch('http://localhost:8282/get_random_player') 
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('player-name').textContent = data.name;
-                    document.getElementById('player-position').textContent = data.position;
-                    document.getElementById('player-overall').textContent = data.overall;
-                    document.getElementById('player-pace').textContent = data.pace;
-                    document.getElementById('player-shooting').textContent = data.shooting;
-                    document.getElementById('player-passing').textContent = data.passing;
-                    document.getElementById('player-dribbling').textContent = data.dribbling;
-<<<<<<< HEAD
-                    document.getElementById('player-defending').textContent = data.defending;
-                    document.getElementById('player-physicality').textContent = data.physicality;
-                    // Add more lines to display other player attributes
-=======
-                    document.getElementById('player-defense').textContent = data.defense;
-                    document.getElementById('player-physicality').textContent = data.physicality;
->>>>>>> 852ea7f (api endpoint update)
+                    document.getElementById('player-position').textContent = data.pos;
+                    document.getElementById('player-overall').textContent = data.ovr;
+                    document.getElementById('player-pace').textContent = data.pac;
+                    document.getElementById('player-shooting').textContent = data.sho;
+                    document.getElementById('player-passing').textContent = data.pas;
+                    document.getElementById('player-dribbling').textContent = data.dri;
+                    document.getElementById('player-defending').textContent = data.def;
+                    document.getElementById('player-physicality').textContent = data.phy;
                 });
         }
         document.getElementById("open-pack-button").addEventListener("click", openPack);
