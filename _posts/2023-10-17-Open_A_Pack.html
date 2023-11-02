@@ -8,6 +8,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         text-align: center;
+        color: white;
     }
 </style>
 <body>
@@ -25,6 +26,7 @@
         <p>Physicality: <span id="player-physicality"></span></p>
     </div>
     <script>
+        
         function openPack() {
             fetch('http://localhost:8281/api/jokes/', { method: 'GET' })
                 .then(response => {
@@ -35,15 +37,15 @@
                 })
                 .then(player => {
                     // Update the HTML elements with player data
-                    document.getElementById('player-name').textContent = player.Name;
-                    document.getElementById('player-position').textContent = player.Position;
-                    document.getElementById('player-overall').textContent = player.Overall;
-                    document.getElementById('player-pace').textContent = player.Pace;
-                    document.getElementById('player-shooting').textContent = player.Shooting;
-                    document.getElementById('player-passing').textContent = player.Passing;
-                    document.getElementById('player-dribbling').textContent = player.Dribbling;
-                    document.getElementById('player-defending').textContent = player.Defense;
-                    document.getElementById('player-physicality').textContent = player.Physicality;
+                    document.getElementById('player-name').textContent = player[0].name;
+                    document.getElementById('player-position').textContent = player[0].position;
+                    document.getElementById('player-overall').textContent = player[0].stats[0];
+                    document.getElementById('player-pace').textContent = player[0].stats[1];
+                    document.getElementById('player-shooting').textContent = player[0].stats[2];
+                    document.getElementById('player-passing').textContent = player[0].stats[3];
+                    document.getElementById('player-dribbling').textContent = player[0].stats[4];
+                    document.getElementById('player-defending').textContent = player[0].stats[5];
+                    document.getElementById('player-physicality').textContent = player[0].stats[6];
                 })
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
