@@ -26,26 +26,30 @@
     </div>
     <script>
         function openPack() {
-            fetch('http://localhost:8281/api/jokes/')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+            fetch('http://localhost:8281/api/jokes/', { method: 'GET' })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
                     }
                     return response.json();
                 })
-                .then(data => {
-                    console.log(data);
-                    data.forEach(player => {
-                        console.log('Name: ${player.position}');
-                        console.log('Position: ${player.position}');
-                        console.log('Stats: ${player.stats.join(', ')}');
-                        });
-                    });
-                    .catch(error => {
-                        console.error('There was a problem with the fetch operation:',error)
-                    })
+                .then(player => {
+                    // Update the HTML elements with player data
+                    document.getElementById('player-name').textContent = player.Name;
+                    document.getElementById('player-position').textContent = player.Position;
+                    document.getElementById('player-overall').textContent = player.Overall;
+                    document.getElementById('player-pace').textContent = player.Pace;
+                    document.getElementById('player-shooting').textContent = player.Shooting;
+                    document.getElementById('player-passing').textContent = player.Passing;
+                    document.getElementById('player-dribbling').textContent = player.Dribbling;
+                    document.getElementById('player-defending').textContent = player.Defense;
+                    document.getElementById('player-physicality').textContent = player.Physicality;
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
         }
-        document.getElementById("open-pack-button").addEventListener("click", openPack);
+        document.getElementById('open-pack-button').addEventListener('click', openPack);
     </script>
 </body>
 </html>
