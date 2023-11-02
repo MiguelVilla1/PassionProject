@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Pack Opening</title>
+    <style>
+        body {
+            background-image: url('https://i.ytimg.com/vi/vpjWI1e0Mbk/maxresdefault.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-image: url('https://i.ytimg.com/vi/vpjWI1e0Mbk/maxresdefault.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        text-align: center;
-    }
-</style>
 <body>
     <button id="open-pack-button">Open a pack</button>
     <div>
@@ -26,7 +27,7 @@
     </div>
     <script>
         function openPack() {
-            fetch('http://fifabackend.stu.nighthawkcodingsociety.com') 
+            fetch('http://fifabackend.stu.nighthawkcodingsociety.com/') 
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('player-name').textContent = data.name;
